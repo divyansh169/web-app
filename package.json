@@ -3,12 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@lottiefiles/lottie-player": "^2.0.4",
+    "@mui/material": "^5.15.20",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "firebase": "^10.12.1",
+    "lottie-web": "^5.12.2",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.3",
     "react-dom": "^18.3.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "react-virtualized": "^9.22.5",
+    "react-window": "^1.8.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

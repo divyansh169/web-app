@@ -1,0 +1,223 @@
+.home-container {
+    padding: 20px;
+    padding-top: 60px;
+}
+
+body {
+    padding-top: 320px; /* Adjust based on the height of your fixed top bar */
+}
+
+.location-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.dishes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dish-card {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(20% - 40px);
+    min-width: 200px;
+    max-width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.dish-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dish-name {
+    font-size: 18px;
+    color: #000;
+}
+
+.dish-price {
+    font-size: 16px;
+    color: #FA3E03;
+}
+
+.dish-attributes {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.dish-stock {
+    font-size: 14px;
+    color: red;
+    margin-top: 8px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* .order-counter {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.order-counter button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-counter span {
+    margin: 0 10px;
+    font-size: 16px;
+} */
+
+.order-counter {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.order-counter button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.order-counter button:hover {
+    background-color: #0056b3;
+}
+
+.order-counter button:active {
+    transform: scale(0.9);
+}
+
+.order-counter span {
+    margin: 0 10px;
+    font-size: 16px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.order-counter span.increase {
+    transform: scale(1.2);
+    color: green;
+}
+
+.order-counter span.decrease {
+    transform: scale(1.2);
+    color: red;
+}
+
+@media (max-width: 1200px) {
+    .dish-card {
+        flex: 1 1 calc(25% - 40px);
+    }
+}
+
+@media (max-width: 992px) {
+    .dish-card {
+        flex: 1 1 calc(33.333% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .dish-card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 576px) {
+    .dish-card {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+
+
+
+
+/* Adjust for large screens */
+@media (min-width: 1200px) {
+    .home-container {
+        padding-top: 230px; /* Larger padding for larger screens */
+    }
+}
+
+/* Adjust for medium screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .home-container {
+        padding-top: 400px; /* Medium padding for medium screens */
+    }
+}
+
+/* Adjust for small screens */
+@media (min-width: 771px) and (max-width: 991px) {
+    .home-container {
+        padding-top: 800px; /* Default top padding for small screens */
+    }
+}
+
+/* Adjust for extra small screens */
+@media (min-width: 577px) and (max-width: 770px){
+    .home-container {
+        padding-top: 1100px; /* Smaller padding for smaller screens */
+    }
+}
+/* Adjust for extra small screens */
+@media (max-width: 576px) {
+    .home-container {
+        padding-top: 2700px; /* Smaller padding for smaller screens */
+    }
+}
