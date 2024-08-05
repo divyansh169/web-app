@@ -13,6 +13,8 @@ import Cart from './components/Cart';
 import Order from './components/Order';
 import Track from './components/Track';
 import Profile from './components/Profile';
+import PendingOrders from './components/PendingOrders';
+import PayableOrders from './components/PayableOrders';
 
 const App = () => (
   <Router>
@@ -25,9 +27,19 @@ const App = () => (
       <Route path="/tabs" element={<TabNavigation />}>
         <Route path="home" element={<Home />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="order" element={<Order />} />
+        <Route path="order" element={<Order />}>
+          <Route path="pending-orders" element={<PendingOrders />} />
+          <Route path="payable-orders" element={<PayableOrders />} />
+        </Route>
         <Route path="track" element={<Track />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="profile" element={<Profile />}>
+          <Route path="account" element={<div></div>} />
+          <Route path="order-chatbot" element={<div></div>} />
+          <Route path="order-history" element={<div></div>} />
+          <Route path="chats-messages" element={<div></div>} />
+          <Route path="verify-phone" element={<div></div>} />
+          <Route path="tech-support" element={<div></div>} />
+        </Route>
       </Route>
     </Routes>
   </Router>

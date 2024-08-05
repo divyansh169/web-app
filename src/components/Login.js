@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css';
 import backgroundImage from '../assets/pic5.jpg';
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { auth } from '../firebase';
 
 const Login = () => {
@@ -18,9 +18,17 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            await signInWithEmailAndPassword(auth, email, password);
-            alert("Login successful!");
-            navigate('/tabs/home');
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+
+            if (user.emailVerified) {
+                alert("Login successful!");
+                navigate('/tabs/home');
+            } else {
+                await sendEmailVerification(user);
+                alert("Please verify your email address. A new verification email has been sent.");
+                auth.signOut(); // Sign out the user as their email is not verified
+            }
         } catch (error) {
             alert("Login failed: " + error.message);
         }

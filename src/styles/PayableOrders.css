@@ -1,0 +1,191 @@
+.payable-orders-container {
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 0.5s ease-in-out;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.order-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.dish-details {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dish-details:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dish-name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+.dish-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.dish-info p {
+    margin: 0;
+    color: #555;
+}
+
+.dish-total {
+    font-weight: bold;
+}
+
+.chef-message-card {
+    background: #fff7e0;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chef-message {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+.payment-section {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.coupon-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.coupon-input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.apply-coupon-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply-coupon-btn:hover {
+    background-color: #0056b3;
+}
+
+.price-details {
+    margin-top: 10px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.total-amount {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pay-on-delivery-btn, .add-payment-method-btn, .cancel-order-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.pay-on-delivery-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.pay-on-delivery-btn:hover {
+    background-color: #218838;
+}
+
+.add-payment-method-btn {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.add-payment-method-btn:hover {
+    background-color: #138496;
+}
+
+.cancel-order-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.cancel-order-btn:hover {
+    background-color: #c82333;
+}
+
+.coupon-valid {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

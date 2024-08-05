@@ -87,11 +87,11 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            <div className="location-info">
+            {/* <div className="location-info">
                 <p>City: {locationInfo.city}</p>
                 <p>State: {locationInfo.state}</p>
-                <p>Suburban: {locationInfo.suburban}</p>
-            </div>
+                <p>Store: {locationInfo.suburban}</p>
+            </div> */}
             <div className="dishes-list">
                 {displayedDishes.length > 0 ? (
                     displayedDishes.map((dish) => (
@@ -153,7 +153,6 @@ const DishCard = ({ dish, locationInfo }) => {
             const cartRef = ref(db, `Cart/CartItems/${user.uid}/${dish.id}`);
             const cartSnapshot = await get(ref(db, `Cart/CartItems/${user.uid}`));
 
-            // Check condition 1: Ensure same ChefId
             if (cartSnapshot.exists()) {
                 const cartData = cartSnapshot.val();
                 const existingChefIds = Object.values(cartData).map(item => item.ChefId);
@@ -175,7 +174,7 @@ const DishCard = ({ dish, locationInfo }) => {
                     ChefId: dish.ChefId
                 };
 
-                console.log("Updating cart item:", cartItem); // Debug log
+                console.log("Updating cart item:", cartItem);
 
                 if (Object.values(cartItem).some(value => value === undefined)) {
                     console.error("Cart item contains undefined values:", cartItem);
@@ -184,13 +183,13 @@ const DishCard = ({ dish, locationInfo }) => {
 
                 await set(cartRef, cartItem);
                 if (newQuantity > quantity) {
-                    alert("Added to cart"); // Show toast message for adding to cart
+                    alert("Added to cart");
                 } else {
-                    alert("Removed from cart"); // Show toast message for removing from cart
+                    alert("Removed from cart");
                 }
             } else {
-                await set(cartRef, null); // Remove item if quantity is zero
-                alert("Removed from cart"); // Show toast message for removing from cart
+                await set(cartRef, null);
+                alert("Removed from cart");
             }
         }
         setAnimationClass(newQuantity > quantity ? 'increase' : 'decrease');

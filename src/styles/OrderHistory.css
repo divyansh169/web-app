@@ -1,0 +1,73 @@
+.order-history-container {
+    padding: 20px;
+}
+
+.order-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-items {
+    margin-top: 10px;
+}
+
+.order-item {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.order-item:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.custom-datepicker {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-calendar {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+    background-color: #007bff;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+    color: #fff;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.custom-day {
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.custom-day:hover {
+    background-color: #f0f0f0;
+}
